@@ -12,6 +12,19 @@ beforeEach(inject(function($1) {
 }));
 endsnippet
 
+snippet amodu "angular module" i
+angular.module('$1', ['ui.router', '$2', '$3', '$4'])
+	.config(function ($stateProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise('/');
+		$0
+	});
+endsnippet
+
+snippet am "angular module for chaining" i
+angular.module('$1')
+	.$0
+endsnippet
+
 snippet aconf "angular config" i
 config(function($1) {
 	$0
